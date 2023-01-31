@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Autofill</title>
+    <link rel="icon" type="image/x-icon" href="../img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <!-- Class variables:
+    label
+    ecom
+  -->
+  <body class="" id="body">
+    <div class="content">
+      <header>
+        <a href="../index.html">
+          <img src="../logo.svg" id="logo" alt="Logo"
+        /></a>
+        <button
+          class="m"
+          id="signInBack"
+          onclick=" window.location.href = '../index.html'"
+        >
+          <svg class="feather">
+            <use href="../feather-sprite.svg#arrow-left" />
+          </svg>
+          <span><p>Back</p></span>
+        </button>
+        <div class="icon-stack">
+          <div class="icon-stack" id="ButtonExtraOptions">
+            <button class="m" id="ButtonRtl">
+              <svg class="feather">
+                <use href="../feather-sprite.svg#align-left" />
+              </svg>
+              <span><p>Switch RTL</p></span>
+            </button>
+            <button class="m" id="ButtonFillOptions">
+              <svg class="feather">
+                <use href="../feather-sprite.svg#zap" />
+              </svg>
+              <span><p>Prefill controls: on</p></span>
+            </button>
+            <button class="m" id="ButtonAutocomplete">
+              <svg class="feather">
+                <use href="../feather-sprite.svg#check-circle" />
+              </svg>
+              <span><p>Autocomplete=on</p></span>
+            </button>
+            <button class="m" id="ButtonContent">
+              <img src="../img/img_01.jpeg" alt="" />
+              <span><p>Content: Shoe</p></span>
+            </button>
+          </div>
+          <button class="m" id="ButtonSettings">
+            <svg class="feather">
+              <use href="../feather-sprite.svg#settings" />
+            </svg>
+            <span><p>Show options</p></span>
+          </button>
+          <button class="m" id="ButtonTheme">
+            <svg class="feather">
+              <use href="../feather-sprite.svg#moon" />
+            </svg>
+            <span><p>Dark theme</p></span>
+          </button>
+          <button class="m" id="ButtonMenu">
+            <svg class="feather">
+              <use href="../feather-sprite.svg#menu" />
+            </svg>
+            <span><p>Templates</p></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="success--signin">
+        <div class="success--header remove"></div>
+        <div class="feed-column">
+          <img src="../img/content_1.jpg" alt="shoe" />
+          <img src="../img/content_2.jpg" alt="shoe" />
+          <img src="../img/content_5.jpg" alt="shoe" />
+          <img src="../img/content_3.jpg" alt="shoe" />
+
+          <img src="../img/content_5.jpg" alt="shoe" />
+          <img src="../img/content_6.jpg" alt="shoe" />
+          <img src="../img/content_1.jpg" alt="shoe" />
+          <img src="../img/content_2.jpg" alt="shoe" />
+        </div>
+        <div class="feed-column">
+          <img src="../img/content_3.jpg" alt="shoe" />
+          <img src="../img/content_4.jpg" alt="shoe" />
+          <img src="../img/content_6.jpg" alt="shoe" />
+          <img src="../img/content_4.jpg" alt="shoe" />
+
+          <img src="../img/content_1.jpg" alt="shoe" />
+          <img src="../img/content_2.jpg" alt="shoe" />
+          <img src="../img/content_5.jpg" alt="shoe" />
+          <img src="../img/content_3.jpg" alt="shoe" />
+        </div>
+        <div class="feed-column">
+          <img src="../img/content_5.jpg" alt="shoe" />
+          <img src="../img/content_6.jpg" alt="shoe" />
+          <img src="../img/content_1.jpg" alt="shoe" />
+          <img src="../img/content_2.jpg" alt="shoe" />
+
+          <img src="../img/content_3.jpg" alt="shoe" />
+          <img src="../img/content_4.jpg" alt="shoe" />
+          <img src="../img/content_6.jpg" alt="shoe" />
+          <img src="../img/content_4.jpg" alt="shoe" />
+        </div>
+      </div>
+
+      <div id="summary-price" class="delete-fix"></div>
+
+      <div class="modal-scrim">
+        <div class="centre-modal">
+          <img src="../logo.svg" id="logo" alt="Logo" />
+
+          <div class="title mb-2">
+            <h1 class="title h2">Password reset</h1>
+            <p>Enter the email you used to create an account.</p>
+          </div>
+          <!-- Start of the Main area where the form is -->
+
+          <form class="main" id="addressForm" action="reset.html">
+            <div class="input_wrapper">
+              <label class="labelID" for="Email">Email</label>
+              <input id="Email" type="text" placeholder="Email" />
+            </div>
+            <input
+              type="submit"
+              value="Confirm email"
+              id="submit-address"
+              class="text-p largebtn"
+            />
+          </form>
+          <p class="light membership">
+            Changed your mind? <a href="../signin/">Sign in</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="sign-in-footer">
+      <div class="content">
+        <ul class="col-1">
+          <a href="#">Gift cards</a>
+          <a href="#">Find a store</a>
+          <a href="#">Become a member</a>
+        </ul>
+        <ul class="col-2">
+          <a href="#">Student discount</a>
+          <a href="#">Feedback</a>
+          <a href="#">Promo codes</a>
+        </ul>
+        <ul class="col-3">
+          <a href="#">Get Help</a>
+          <a href="#">About Shrine.com</a>
+        </ul>
+        <div class="social">
+          <img src="../img/twitter.svg" alt="twitter" />
+          <img src="../img/fb.svg" alt="Facebook" />
+          <img src="../img/yt.svg" alt="YouTube" />
+        </div>
+        <p id="copyright">© Shrine 2023</p>
+      </div>
+    </footer>
+
+    <div id="prefillOptions">
+      <button class="m" id="resetForm">
+        <svg class="feather">
+          <use href="../feather-sprite.svg#rotate-ccw" />
+        </svg>
+      </button>
+      <div class="hr"></div>
+
+      <p class="light">Fill form</p>
+
+      <div id="optionsStack">
+        <button id="prefill_A">alexpark@gmail.com</button>
+        <!-- <button id="prefill_B">Alex<i class="xxs">MTV</i></button> -->
+        <button id="prefill_C">alexpark@shrine.io</button>
+        <button id="prefill_D">charlie.shmidt@gmail.com</button>
+        <button id="prefill_E">isabelle.shizue@gmail.com</button>
+      </div>
+
+      <div id="closediv">
+        <button class="m" id="closeOptions">
+          <svg class="feather">
+            <use href="../feather-sprite.svg#x" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="../darktheme.js"></script>
+    <script src="../settings.js"></script>
+    <script>
+      localStorage.removeItem("NewAccount");
+
+      const Field_ID = ["Email"];
+      const Field = [];
+      // const AddressForm = [FirstName, LastName, Phone, Country, AddressA, AddressB, City, Postcode]
+      for (let i in Field_ID) {
+        // Popoluate Address Field Array with HTML Field elements that were found by ID
+        Field.push(document.getElementById(Field_ID[i]));
+      }
+
+      function passValues() {
+        for (let i in Field_ID) {
+          // On Submission add values that were saved to local storage
+          localStorage.setItem(Field_ID[i], Field[i].value);
+        }
+      }
+
+      // When Form is submittted Call PassValues function & Navigate to Payment.html
+      let form = document.getElementById("addressForm");
+      form.addEventListener("submit", function (event) {
+        passValues();
+        window.location.href = "reset.html";
+      });
+
+      // Form Quick options
+      const PrefillButtonsID = [
+        "prefill_A",
+        // "prefill_B",
+        "prefill_C",
+        "prefill_D",
+        "prefill_E",
+      ];
+
+      const PrefillProfile = [
+        {
+          Email: "alex.park@gmail.com",
+        },
+        {
+          Email: "alexpark@shrine.io",
+        },
+        {
+          Email: "charlie.shmidt@gmail.com",
+        },
+        {
+          Email: "isabelle.shizue@gmail.com",
+        },
+      ];
+
+      const PrefillButton = [];
+      for (let i in PrefillButtonsID) {
+        // Populate PrefillButton Array with HTML Input elements that are located by their ID
+        PrefillButton.push(document.getElementById(PrefillButtonsID[i]));
+        // For Each Prefill Button adding a Click event
+        PrefillButton[i].addEventListener("click", function (event) {
+          // C = is a way to find which of the button was clicked
+          let c = i;
+          // For each Address Field
+          for (let y in Field) {
+            if (Field[y] != document.getElementById("coupon")) {
+              Field[y].value = Object.values(PrefillProfile[c])[y];
+            }
+          }
+        });
+      }
+      const ResetFormButton = document.getElementById("resetForm");
+      ResetFormButton.addEventListener("click", function (event) {
+        form.reset();
+      });
+
+      const CloseFormButton = document.getElementById("closeOptions");
+      const PrefillMenu = document.getElementById("prefillOptions");
+      CloseFormButton.addEventListener("click", function (event) {
+        PrefillMenu.remove();
+      });
+    </script>
+    <script src="../autocomplete.js"></script>
+  </body>
+</html>

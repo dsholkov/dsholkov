@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Autofill</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <!-- Class variables:
+    label
+    ecom
+  -->
+
+  <body class="" id="body">
+    <div class="content">
+      <header>
+        <a href="index.html"> <img src="logo.svg" id="logo" alt="Logo" /></a>
+        <div class="icon-stack">
+          <div class="icon-stack" id="ButtonExtraOptions">
+            <button class="m" id="ButtonRtl">
+              <svg class="feather">
+                <use href="feather-sprite.svg#align-left" />
+              </svg>
+              <span><p>Switch RTL</p></span>
+            </button>
+            <button class="m" id="ButtonFillOptions">
+              <svg class="feather">
+                <use href="feather-sprite.svg#zap" />
+              </svg>
+              <span><p>Prefill controls: on</p></span>
+            </button>
+            <button class="m" id="ButtonAutocomplete">
+              <svg class="feather">
+                <use href="feather-sprite.svg#check-circle" />
+              </svg>
+              <span><p>Autocomplete=on</p></span>
+            </button>
+            <button class="m" id="ButtonContent">
+              <img src="img/img_01.jpeg" alt="" />
+              <span><p>Content: Shoe</p></span>
+            </button>
+          </div>
+          <button class="m" id="ButtonSettings">
+            <svg class="feather">
+              <use href="feather-sprite.svg#settings" />
+            </svg>
+            <span><p>Show options</p></span>
+          </button>
+          <button class="m" id="ButtonTheme">
+            <svg class="feather">
+              <use href="feather-sprite.svg#moon" />
+            </svg>
+            <span><p>Dark theme</p></span>
+          </button>
+          <button class="m" id="ButtonMenu">
+            <svg class="feather">
+              <use href="feather-sprite.svg#menu" />
+            </svg>
+            <span><p>Templates</p></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Start of Content -->
+      <div class="content-grid-">
+        <p class="light mt-1">
+          Beware what you post. All forms saves data only to browser local
+          storage.
+          <a href="#" onclick="localStorage.clear();"> Clear storage </a>
+          Website is managed by dsholkov@
+        </p>
+        <h1 class="title">Journeys</h1>
+        <!-- Start of the Main area where the form is -->
+        <div class="main">
+          <h2>Addresses & Payments</h2>
+
+          <section>
+            <div class="index-column">
+              <span class="label">2 step checkout flow</span>
+
+              <a href="sqrs/" class="index-item">
+                <img
+                  src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/shopping-cart_1f6d2.png"
+                  alt=""
+                />
+                <div>
+                  <p>Squarespace</p>
+                  <p class="xs">Starts with First name / 2 col</p>
+                </div>
+              </a>
+
+              <a href="ecom/" class="index-item">
+                <img
+                  src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/running-shoe_1f45f.png"
+                  alt=""
+                />
+                <div>
+                  <p>Shopify</p>
+                  <p class="xs">Starts with Email / 1 col</p>
+                </div>
+              </a>
+              <a href="international/" class="index-item">
+                <img
+                  src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/skis_1f3bf.png"
+                  alt=""
+                />
+                <div>
+                  <p>international</p>
+                  <p class="xs">
+                    Starts with honorific title, has Building number
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div class="index-column">
+              <span class="label">Multi step checkout flows</span>
+
+              <a href="guest/" class="index-item">
+                <img
+                  src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/envelope_2709-fe0f.png"
+                  alt=""
+                />
+                <div>
+                  <p>Guest checkout</p>
+                  <p class="xs">Email asked seperate to checkout, no country</p>
+                </div>
+              </a>
+
+              <a href="shipping/" class="index-item">
+                <img
+                  src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/delivery-truck_1f69a.png"
+                  alt=""
+                />
+                <div>
+                  <p>Shipping method</p>
+                  <p class="xs">
+                    Same as guest + additional step before payment
+                  </p>
+                </div>
+              </a>
+              <a href="signincheckout/" class="index-item">
+                <img
+                  src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/locked-with-key_1f510.png"
+                  alt=""
+                />
+                <div>
+                  <p>Sign in & checkout</p>
+                  <p class="xs">Partially pre-filled form as user signed in</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="index-column">
+              <span class="label">1 step checkout flow</span>
+
+              <a href="#" class="index-item wip">
+                <img
+                  src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/shopping-bags_1f6cd-fe0f.png"
+                  alt=""
+                />
+                <div>
+                  <p>Single page checkout</p>
+                  <p class="xs">Includes shipping & payment info on a page</p>
+                </div>
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <h2>Passwords</h2>
+        <div class="main">
+          <section>
+            <div class="index-column">
+              <span class="label">Sign in flows</span>
+
+              <a href="signin/" class="index-item">
+                <img
+                  src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/locked-with-key_1f510.png"
+                  alt=""
+                />
+                <div>
+                  <p>Sign in</p>
+                  <p class="xs">Username + Password</p>
+                </div>
+              </a>
+
+              <a href="signin-2step/" class="index-item">
+                <img
+                  src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/eye_1f441-fe0f.png"
+                  alt=""
+                />
+                <div>
+                  <p>2-step sign in</p>
+                  <p class="xs">Email first, password next</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="index-column">
+              <span class="label">Generate password flows</span>
+
+              <a href="createaccount/" class="index-item">
+                <img
+                  src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/identification-card_1faaa.png"
+                  alt=""
+                />
+                <div>
+                  <p>Create an account</p>
+                  <p class="xs">Registration form with 2 password fields</p>
+                </div>
+              </a>
+
+              <a href="resetpassword/" class="index-item">
+                <img
+                  src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/see-no-evil-monkey_1f648.png"
+                  alt=""
+                />
+                <div>
+                  <p>Reset password</p>
+                  <p class="xs">Password reset in settings</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="index-column">
+              <!-- <span class="label">1 step flow</span>
+
+              <a href="#" class="index-item wip">
+                <img
+                  src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/shopping-bags_1f6cd-fe0f.png"
+                  alt=""
+                />
+                <div>
+                  <p>Single page checkout</p>
+                  <p class="xs">Includes shipping & payment info on a page</p>
+                </div>
+              </a> -->
+            </div>
+          </section>
+        </div>
+        <h1 class="title">More...</h1>
+        <!-- Start of the Main area where the form is -->
+        <div class="main">
+          <section>
+            <div class="index-column">
+              <span class="label">Addresses</span>
+
+              <a href="sqrs/" class="index-item">
+                <img
+                  src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/house_1f3e0.png"
+                  alt=""
+                />
+                <div>
+                  <p>Address</p>
+                  <p class="xs">Basic address form</p>
+                </div>
+              </a>
+
+              <a onclick="rtl.switch('on')" href="sqrs/" class="index-item">
+                <img
+                  src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/globe-showing-europe-africa_1f30d.png"
+                  alt=""
+                />
+                <div>
+                  <p>RTL Address</p>
+                  <p class="xs">Right to left language form</p>
+                </div>
+              </a>
+              <a href="phonefirst/" class="index-item">
+                <img
+                  src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/telephone-receiver_1f4de.png"
+                  alt=""
+                />
+                <div>
+                  <p>Phone number first</p>
+                  <p class="xs">Starts with phone number</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="index-column">
+              <span class="label">Payment methods</span>
+
+              <a href="guest/payment.html" class="index-item">
+                <img
+                  src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/credit-card_1f4b3.png"
+                  alt=""
+                />
+                <div>
+                  <p>Card number</p>
+                  <p class="xs">Payment form starts with card number</p>
+                </div>
+              </a>
+
+              <a href="sqrs/payment.html" class="index-item">
+                <img
+                  src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/identification-card_1faaa.png"
+                  alt=""
+                />
+                <div>
+                  <p>Cardholder name</p>
+                  <p class="xs">Payment form starts with cardholder name</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="index-column">
+              <!-- <span class="label">1 step flow</span>
+
+              <a href="#" class="index-item wip">
+                <img
+                  src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/shopping-bags_1f6cd-fe0f.png"
+                  alt=""
+                />
+                <div>
+                  <p>Single page checkout</p>
+                  <p class="xs">Includes shipping & payment info on a page</p>
+                </div>
+              </a> -->
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="darktheme.js"></script>
+    <script src="settings.js"></script>
+    <script>
+      // MenuButton Navigates to Index
+      ButtonMenu = document.getElementById("ButtonMenu");
+      ButtonMenu.addEventListener("click", function () {
+        window.location.href = "index.html";
+      });
+
+      rtl.switch("off");
+      settings.switch("on");
+      localStorage.removeItem("autocomplete");
+
+      // localStorage.setItem("autocomplete", "on");
+    </script>
+  </body>
+</html>

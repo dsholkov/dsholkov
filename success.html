@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Autofill</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <!-- Class variables:
+    label
+    ecom
+  -->
+  <body class="" id="body">
+    <div class="content">
+      <header>
+        <a href="index.html"> <img src="logo.svg" id="logo" alt="Logo" /></a>
+        <div class="icon-stack">
+          <div class="icon-stack" id="ButtonExtraOptions">
+            <button class="m" id="ButtonRtl">
+              <svg class="feather">
+                <use href="feather-sprite.svg#align-left" />
+              </svg>
+              <span><p>Switch RTL</p></span>
+            </button>
+            <button class="m" id="ButtonFillOptions">
+              <svg class="feather">
+                <use href="feather-sprite.svg#zap" />
+              </svg>
+              <span><p>Prefill controls: on</p></span>
+            </button>
+            <button class="m" id="ButtonAutocomplete">
+              <svg class="feather">
+                <use href="feather-sprite.svg#check-circle" />
+              </svg>
+              <span><p>Autocomplete=on</p></span>
+            </button>
+            <button class="m" id="ButtonContent">
+              <img src="img/img_01.jpeg" alt="" />
+              <span><p>Content: Shoe</p></span>
+            </button>
+          </div>
+          <button class="m" id="ButtonSettings">
+            <svg class="feather">
+              <use href="feather-sprite.svg#settings" />
+            </svg>
+            <span><p>Show options</p></span>
+          </button>
+          <button class="m" id="ButtonTheme">
+            <svg class="feather">
+              <use href="feather-sprite.svg#moon" />
+            </svg>
+            <span><p>Dark theme</p></span>
+          </button>
+          <button class="m" id="ButtonMenu">
+            <svg class="feather">
+              <use href="feather-sprite.svg#menu" />
+            </svg>
+            <span><p>Templates</p></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="success--grid">
+        <div class="success--header">
+          <h1 id="title--success">Your order was<br />placed successfully</h1>
+          <p>
+            Confirmation email sent to
+            <span id="email">alexpark@gmail.com</span>
+          </p>
+
+          <div class="order-details">
+            <div class="detail">
+              <em>Your order:</em>
+              <p>C00143680700</p>
+            </div>
+            <div class="detail">
+              <em>Tracking number:</em>
+              <p>QHY257792797</p>
+            </div>
+            <div class="detail">
+              <em>Order total:</em>
+              <p id="summary-total">$99.00</p>
+            </div>
+            <div class="detail">
+              <em>Payment:</em>
+              <p>Mastercard •••• 4657</p>
+            </div>
+          </div>
+        </div>
+        <div class="success--img">
+          <img
+            src="img/img_01.jpeg"
+            class="summary-img"
+            id="summary-img-1"
+            alt=""
+          />
+          <img
+            src="img/img_02.png"
+            class="summary-img hidden"
+            id="summary-img-2"
+            alt=""
+          />
+          <img
+            src="img/img_03.png"
+            class="summary-img hidden"
+            id="summary-img-3"
+            alt=""
+          />
+          <img
+            src="img/img_04.png"
+            class="summary-img hidden"
+            id="summary-img-4"
+            alt=""
+          />
+        </div>
+        <div class="success--shipping">
+          <div class="order--title">
+            <p id="summary-name">Nike Air Force 1 '07</p>
+            <h2 id="arrivalTime">Arrival: 7 Jun - 21 Jun</h2>
+          </div>
+          <div class="progress">
+            <div class="progress--bar">
+              <div class="progress--fill"></div>
+            </div>
+            <div class="progress--labels">
+              <p>Order placed</p>
+              <em>Operation in prgoress</em>
+              <p class="crop">Shipped</p>
+              <p class="crop">Delivered</p>
+            </div>
+          </div>
+          <p>
+            We have everything we need to complete your order. We will update
+            the delivery date when your order is ready for shipment
+          </p>
+        </div>
+        <div class="success--footer order-footer">
+          <h3>Contact us</h3>
+          <p>Need more help? Call at 0800 2000 752</p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="content">
+        <ul class="col-1">
+          <a href="#">Gift cards</a>
+          <a href="#">Find a store</a>
+          <a href="#">Become a member</a>
+        </ul>
+        <ul class="col-2">
+          <a href="#">Student discount</a>
+          <a href="#">Feedback</a>
+          <a href="#">Promo codes</a>
+        </ul>
+        <ul class="col-3">
+          <a href="#">Get Help</a>
+          <a href="#">About Shrine.com</a>
+        </ul>
+        <div class="social">
+          <img src="img/twitter.svg" alt="twitter" />
+          <img src="img/fb.svg" alt="Facebook" />
+          <img src="img/yt.svg" alt="YouTube" />
+        </div>
+        <p class="copyright" id="copyright">© Shrine 2023</p>
+      </div>
+    </footer>
+
+    <div id="summary-price" class="delete-fix"></div>
+
+    <script src="darktheme.js"></script>
+    <script src="settings.js"></script>
+    <script>
+      if (
+        localStorage.getItem("Email") != null &&
+        localStorage.getItem("Email") != ""
+      ) {
+        document.getElementById("email").innerHTML =
+          localStorage.getItem("Email");
+      }
+
+      months = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ];
+      maxDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+      let days = [
+        "Sun",
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun",
+        "Mon",
+        "Tue",
+      ];
+      let d = new Date();
+      let dayName = days[d.getDay() + 1];
+
+      let today = new Date();
+      let dd = String(
+        Math.min(today.getDate() + 1, maxDays[today.getMonth()])
+      ).padStart(2, "0");
+      let mm = String(today.getMonth() + 1).padStart(2, "0");
+      date = dd + " " + months[mm - 1];
+      arrival = document.getElementById("arrivalTime");
+      arrival.innerHTML = `Arrival: ${dayName}, ${date}`;
+      // arrival.innerHTML = date;
+    </script>
+  </body>
+</html>
