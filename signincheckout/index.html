@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Autofill</title>
+    <link rel="icon" type="image/x-icon" href="../img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <!-- Class variables:
+    label
+    ecom
+  -->
+  <body class="" id="body">
+    <div class="content">
+      <header>
+        <a href="../index.html">
+          <img src="../logo.svg" id="logo" alt="Logo"
+        /></a>
+        <div class="icon-stack">
+          <div class="icon-stack" id="ButtonExtraOptions">
+            <button class="m" id="ButtonRtl">
+              <svg class="feather">
+                <use href="../feather-sprite.svg#align-left" />
+              </svg>
+              <span><p>Switch RTL</p></span>
+            </button>
+            <button class="m" id="ButtonFillOptions">
+              <svg class="feather">
+                <use href="../feather-sprite.svg#zap" />
+              </svg>
+              <span><p>Prefill controls: on</p></span>
+            </button>
+            <button class="m" id="ButtonAutocomplete">
+              <svg class="feather">
+                <use href="../feather-sprite.svg#check-circle" />
+              </svg>
+              <span><p>Autocomplete=on</p></span>
+            </button>
+            <button class="m" id="ButtonContent">
+              <img src="../img/img_01.jpeg" alt="" />
+              <span><p>Content: Shoe</p></span>
+            </button>
+          </div>
+          <button class="m" id="ButtonSettings">
+            <svg class="feather">
+              <use href="../feather-sprite.svg#settings" />
+            </svg>
+            <span><p>Show options</p></span>
+          </button>
+          <button class="m" id="ButtonTheme">
+            <svg class="feather">
+              <use href="../feather-sprite.svg#moon" />
+            </svg>
+            <span><p>Dark theme</p></span>
+          </button>
+          <button class="m" id="ButtonMenu">
+            <svg class="feather">
+              <use href="../feather-sprite.svg#menu" />
+            </svg>
+            <span><p>Templates</p></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Start of Content -->
+      <div class="content-grid">
+        <h1 class="title">Checkout</h1>
+        <!-- Start of the Main area where the form is -->
+
+        <form class="main guest-checkout" id="guestForm" action="address.html">
+          <div class="select-element">
+            <div class="select-header noline">
+              <input type="radio" name="guestForm" id="SignIn" checked />
+              <span></span>
+              <label class="two-line-label" for="SignIn"
+                ><em>Sign in</em>
+                <p class="light">Checkout faster with saved details</p></label
+              >
+            </div>
+            <div class="select-content guest-checkout noline">
+              <div class="input_wrapper">
+                <label class="labelID" for="Email-login">Email</label>
+                <input id="Email-login" type="text" placeholder="Email" />
+              </div>
+              <div class="input_wrapper">
+                <label class="labelID" for="Password">Password</label>
+                <input id="Password" type="password" placeholder="Password" />
+              </div>
+              <input
+                type="submit"
+                value="Login"
+                id="login-submit"
+                class="text-p largebtn"
+              />
+            </div>
+          </div>
+
+          <div class="select-element">
+            <div class="select-header">
+              <input type="radio" name="guestForm" id="Guest" />
+              <span></span>
+              <label class="two-line-label" for="Guest"
+                ><em>Guest checkout</em>
+                <p class="light">You can create an account later</p></label
+              >
+            </div>
+            <div class="select-content guest-checkout">
+              <div class="input_wrapper">
+                <label class="labelID" for="Email">Email</label>
+                <input id="Email" type="text" placeholder="Email" />
+              </div>
+
+              <div class="checkbox_wrapper">
+                <input
+                  type="checkbox"
+                  name="newsletterCheckbox"
+                  id="newsletterCheckbox"
+                  checked
+                />
+                <span
+                  ><svg class="feather">
+                    <use href="../feather-sprite.svg#check" />
+                  </svg>
+                </span>
+                <label for="newsletterCheckbox"
+                  >Sign up for style news and offers</label
+                >
+              </div>
+
+              <input
+                type="submit"
+                value="Checkout as Guest"
+                id="submit-email"
+                class="text-p largebtn"
+              />
+            </div>
+          </div>
+          <div class="secure-note">
+            <p class="light">
+              Secure checkout — for your protection, all orders go through a
+              rigorous fraud-checking process. We accept most payment networks
+              and providers.
+            </p>
+            <img src="../img/cards.svg" alt="" />
+          </div>
+        </form>
+
+        <!-- End of Main Content Area where the Form is -->
+        <!-- Summary -->
+        <div class="summary">
+          <h2 class="mt-0 h3">Order Summary</h2>
+          <img
+            src="../img/img_01.jpeg"
+            class="summary-img"
+            id="summary-img-1"
+            alt=""
+          />
+          <img
+            src="../img/img_02.png"
+            class="summary-img hidden"
+            id="summary-img-2"
+            alt=""
+          />
+          <img
+            src="../img/img_03.png"
+            class="summary-img hidden"
+            id="summary-img-3"
+            alt=""
+          />
+          <img
+            src="../img/img_04.png"
+            class="summary-img hidden"
+            id="summary-img-4"
+            alt=""
+          />
+
+          <form action="#" id="couponForm" class="coupon">
+            <div class="input_wrapper">
+              <label class="labelID" for="coupon">Coupon</label>
+              <input id="coupon" type="text" placeholder="Promo code" />
+            </div>
+
+            <input
+              type="submit"
+              value="Apply"
+              id="coupon-confirm"
+              class="small"
+            />
+          </form>
+
+          <div class="summary-info">
+            <div class="summary-item summary-name">
+              <p id="summary-name">Nike Air Force 1 '07</p>
+              <p id="summary-price">$99</p>
+            </div>
+            <div class="summary-item light">
+              <p>Discount</p>
+              <p id="summary-subtotal">-</p>
+            </div>
+            <div class="summary-item light">
+              <p>Tax</p>
+              <p>VAT Included</p>
+            </div>
+            <div class="summary-item light">
+              <p>Shipping</p>
+              <p>Free</p>
+            </div>
+            <div class="summary-item summary-total">
+              <p>Total</p>
+              <p id="summary-total">$99</p>
+            </div>
+          </div>
+        </div>
+        <!-- Summary End -->
+      </div>
+
+      <!-- End of Content -->
+    </div>
+    <footer>
+      <div class="content">
+        <ul class="col-1">
+          <a href="#">Gift cards</a>
+          <a href="#">Find a store</a>
+          <a href="#">Become a member</a>
+        </ul>
+        <ul class="col-2">
+          <a href="#">Student discount</a>
+          <a href="#">Feedback</a>
+          <a href="#">Promo codes</a>
+        </ul>
+        <ul class="col-3">
+          <a href="#">Get Help</a>
+          <a href="#">About Shrine.com</a>
+        </ul>
+        <div class="social">
+          <img src="../img/twitter.svg" alt="twitter" />
+          <img src="../img/fb.svg" alt="Facebook" />
+          <img src="../img/yt.svg" alt="YouTube" />
+        </div>
+        <p id="copyright">© Shrine 2023</p>
+      </div>
+    </footer>
+
+    <div id="prefillOptions">
+      <button class="m" id="resetForm">
+        <svg class="feather">
+          <use href="../feather-sprite.svg#rotate-ccw" />
+        </svg>
+      </button>
+      <div class="hr"></div>
+
+      <p class="light">Fill form</p>
+
+      <div id="optionsStack">
+        <button id="prefill_A">Alex Park <i class="xs">gmail</i></button>
+        <button id="prefill_B">Alex Park <i class="xs">work</i></button>
+        <button id="prefill_C">Charlie Shmidt</button>
+        <button id="prefill_D">Isabelle Shizue</button>
+      </div>
+
+      <div id="closediv">
+        <button class="m" id="closeOptions">
+          <svg class="feather">
+            <use href="../feather-sprite.svg#x" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="../darktheme.js"></script>
+    <script src="../settings.js"></script>
+    <script>
+      let guestRadio = document.getElementById("Guest");
+
+      // Defining Fields that are available
+      const Field_ID = ["Email", "Email-login", "Password"];
+      const Field = [];
+      for (let i in Field_ID) {
+        // Popoluate  Field Array with HTML Field elements that were found by ID
+        Field.push(document.getElementById(Field_ID[i]));
+      }
+
+      // Save Email value depending on Whether SignIn Or Guest Checkour Radio is selected
+      function passValues() {
+        if (guestRadio.checked) {
+          localStorage.setItem("Email", Field[0].value);
+        } else {
+          localStorage.setItem("Email", Field[1].value);
+        }
+      }
+
+      // When Form is submitted Save values function (passValues) and navigate to next page
+      let form = document.getElementById("guestForm");
+      form.addEventListener("submit", function (event) {
+        passValues();
+        window.location.href = "address.html";
+      });
+
+      // Form Quick options
+      const PrefillButtonsID = [
+        "prefill_A",
+        "prefill_B",
+        "prefill_C",
+        "prefill_D",
+      ];
+
+      // Fillable Profiles
+      const PrefillProfile = [
+        {
+          Email: "alexpark@gmail.com",
+          Password: "aGzZBaWRqbWGn6y",
+        },
+        {
+          Email: "alexpark@shrine.io",
+          Password: "c8uTpXw75XhEsG5",
+        },
+        {
+          Email: "Charlie.Shmidt@gmail.com",
+          Password: "zG65nBVNyTCybtK",
+        },
+        {
+          Email: "isabelle.shizue.ac@gmail.com",
+          Password: "Umx3Xzq6EJH2U6e",
+        },
+      ];
+
+      const PrefillButton = [];
+      for (let i in PrefillButtonsID) {
+        // Populate PrefillButton Array with HTML Input elements that are located by their ID
+        PrefillButton.push(document.getElementById(PrefillButtonsID[i]));
+        // For Each Prefill Button adding a Click event
+        PrefillButton[i].addEventListener("click", function (event) {
+          // C = is a way to find which of the button was clicked
+          let c = i;
+
+          if (guestRadio.checked) {
+            Field[0].value = Object.values(PrefillProfile[c])[0];
+            Field[1].value = "";
+            Field[2].value = "";
+          } else {
+            Field[1].value = Object.values(PrefillProfile[c])[0];
+            Field[2].value = Object.values(PrefillProfile[c])[1];
+            Field[0].value = "";
+          }
+        });
+      }
+
+      Field[0].addEventListener("input", function () {
+        Field[1].value = "";
+        Field[2].value = "";
+      });
+
+      const ResetFormButton = document.getElementById("resetForm");
+      ResetFormButton.addEventListener("click", function (event) {
+        form.reset();
+      });
+
+      const CloseFormButton = document.getElementById("closeOptions");
+      const PrefillMenu = document.getElementById("prefillOptions");
+      CloseFormButton.addEventListener("click", function (event) {
+        PrefillMenu.remove();
+      });
+    </script>
+    <script src="../autocomplete.js"></script>
+  </body>
+</html>
