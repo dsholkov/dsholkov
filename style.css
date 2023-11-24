@@ -336,6 +336,7 @@ button.m:hover > span {
 input[type="text"],
 input[type="email"],
 input[type="password"],
+textarea,
 select {
   font-size: 0.875rem;
   font-family: "Inter";
@@ -355,7 +356,8 @@ select {
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
-select:focus {
+select:focus,
+textarea:focus {
   border: 1px solid var(--color--field-focus-border);
   box-shadow: 0px 0px 0px 3px var(--color--field-focus-shadow);
   outline: 0;
@@ -385,6 +387,10 @@ select:focus {
 /* Input wrapper setting so Select--chevron icon can be placed on top */
 .input_wrapper {
   position: relative;
+}
+
+textarea {
+  resize: none;
 }
 
 /* --------- Select elements & Dropdown icon --------- */
