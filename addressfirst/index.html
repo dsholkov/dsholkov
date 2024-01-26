@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Autofill</title>
+    <link rel="icon" type="image/x-icon" href="../img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <!-- Class variables:
+    label
+    ecom
+  -->
+  <body class="" id="body">
+    <div class="content">
+      <header>
+        <a href="../index.html">
+          <img src="../logo.svg" id="logo" alt="Logo"
+        /></a>
+        <div class="icon-stack">
+          <div class="icon-stack" id="ButtonExtraOptions">
+            <button class="m" id="ButtonRtl">
+              <svg class="feather">
+                <use href="../feather-sprite.svg#align-left" />
+              </svg>
+              <span><p>Switch RTL</p></span>
+            </button>
+            <button class="m" id="ButtonFillOptions">
+              <svg class="feather">
+                <use href="../feather-sprite.svg#zap" />
+              </svg>
+              <span><p>Prefill controls: on</p></span>
+            </button>
+            <button class="m" id="ButtonAutocomplete">
+              <svg class="feather">
+                <use href="../feather-sprite.svg#check-circle" />
+              </svg>
+              <span><p>Autocomplete=on</p></span>
+            </button>
+            <button class="m" id="ButtonContent">
+              <img src="../img/img_01.jpeg" alt="" />
+              <span><p>Content: Shoe</p></span>
+            </button>
+          </div>
+          <button class="m" id="ButtonSettings">
+            <svg class="feather">
+              <use href="../feather-sprite.svg#settings" />
+            </svg>
+            <span><p>Show options</p></span>
+          </button>
+          <button class="m" id="ButtonTheme">
+            <svg class="feather">
+              <use href="../feather-sprite.svg#moon" />
+            </svg>
+            <span><p>Dark theme</p></span>
+          </button>
+          <button class="m" id="ButtonMenu">
+            <svg class="feather">
+              <use href="../feather-sprite.svg#menu" />
+            </svg>
+            <span><p>Templates</p></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Start of Content -->
+      <div class="content-grid">
+        <h1 class="title">Checkout</h1>
+        <!-- Start of the Main area where the form is -->
+
+        <!-- 📦 Address Form -->
+        <form class="main" id="addressForm" action="payment.html">
+          <h2 class="h3 summary-align">Shipping address</h2>
+
+          <div class="input_wrapper">
+            <label class="labelID" for="Country">Country</label>
+            <select id="Country" name="Country">
+              <option value="Select country">Select country</option>
+              <option value="United States" selected>United States</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="Germany">Germany</option>
+              <option value="Canada">Canada</option>
+              <option value="France">France</option>
+              <option value="South Korea">South Korea</option>
+              <option value="Japan">Japan</option>
+            </select>
+            <div class="select--chevron">
+              <svg class="feather">
+                <use href="../feather-sprite.svg#chevron-down" />
+              </svg>
+            </div>
+          </div>
+          <div class="input_wrapper">
+            <label class="labelID" for="Address 1">Address 1</label>
+            <input id="Address 1" type="text" placeholder="Address 1" />
+          </div>
+          <div class="input_wrapper">
+            <label class="labelID" for="Address 2">Address 2</label>
+            <input id="Address 2" type="text" placeholder="Address 2" />
+          </div>
+          <div class="grid grid-3">
+            <div class="input_wrapper">
+              <label class="labelID" for="City">City</label>
+              <input id="City" type="text" placeholder="City" />
+            </div>
+            <div class="input_wrapper">
+              <label class="labelID" for="State">State</label>
+              <input id="State" type="text" placeholder="State" />
+            </div>
+            <div class="input_wrapper">
+              <label class="labelID" for="Postcode">Postcode</label>
+              <input id="Postcode" type="text" placeholder="Postcode" />
+            </div>
+          </div>
+
+          <h2 class="h3 summary-align">Your contact details</h2>
+          <div class="grid grid-2">
+            <div class="input_wrapper">
+              <label class="labelID" for="FirstName">First Name</label>
+              <input id="FirstName" type="text" placeholder="First Name" />
+            </div>
+            <div class="input_wrapper">
+              <label class="labelID" for="LastName">Last Name</label>
+              <input id="LastName" type="text" placeholder="Last Name" />
+            </div>
+          </div>
+
+          <div class="input_wrapper">
+            <label class="labelID" for="Email">Email</label>
+            <input id="Email" type="email" placeholder="Email" />
+          </div>
+          <div class="input_wrapper">
+            <label class="labelID" for="Phone">Phone number</label>
+            <input id="Phone" type="text" placeholder="Phone number" />
+          </div>
+
+          <div class="form-actions mt-1">
+            <input
+              type="submit"
+              value="Continue to payment"
+              id="submit-address"
+              class="text-p largebtn"
+            />
+          </div>
+        </form>
+
+        <!-- End of Main Content Area where the Form is -->
+
+        <!-- Summary -->
+        <div class="summary">
+          <h2 class="mt-0 h3">Order Summary</h2>
+          <img
+            src="../img/img_01.jpeg"
+            class="summary-img"
+            id="summary-img-1"
+            alt=""
+          />
+          <img
+            src="../img/img_02.png"
+            class="summary-img hidden"
+            id="summary-img-2"
+            alt=""
+          />
+          <img
+            src="../img/img_03.png"
+            class="summary-img hidden"
+            id="summary-img-3"
+            alt=""
+          />
+          <img
+            src="../img/img_04.png"
+            class="summary-img hidden"
+            id="summary-img-4"
+            alt=""
+          />
+
+          <form action="#" id="couponForm" class="coupon">
+            <div class="input_wrapper">
+              <label class="labelID" for="coupon">Coupon</label>
+              <input id="coupon" type="text" placeholder="Promo code" />
+            </div>
+
+            <input
+              type="submit"
+              value="Apply"
+              id="coupon-confirm"
+              class="small"
+            />
+          </form>
+
+          <div class="summary-info">
+            <div class="summary-item summary-name">
+              <p id="summary-name">Nike Air Force 1 '07</p>
+              <p id="summary-price">$99</p>
+            </div>
+            <div class="summary-item light">
+              <p>Discount</p>
+              <p id="summary-subtotal">-</p>
+            </div>
+            <div class="summary-item light">
+              <p>Tax</p>
+              <p>VAT Included</p>
+            </div>
+            <div class="summary-item light">
+              <p>Shipping</p>
+              <p>Free</p>
+            </div>
+            <div class="summary-item summary-total">
+              <p>Total</p>
+              <p id="summary-total">$99</p>
+            </div>
+          </div>
+        </div>
+        <!-- Summary End -->
+      </div>
+
+      <!-- End of Content -->
+    </div>
+    <footer>
+      <div class="content">
+        <ul class="col-1">
+          <a href="#">Gift cards</a>
+          <a href="#">Find a store</a>
+          <a href="#">Become a member</a>
+        </ul>
+        <ul class="col-2">
+          <a href="#">Student discount</a>
+          <a href="#">Feedback</a>
+          <a href="#">Promo codes</a>
+        </ul>
+        <ul class="col-3">
+          <a href="#">Get Help</a>
+          <a href="#">About Shrine.com</a>
+        </ul>
+        <div class="social">
+          <img src="../img/twitter.svg" alt="twitter" />
+          <img src="../img/fb.svg" alt="Facebook" />
+          <img src="../img/yt.svg" alt="YouTube" />
+        </div>
+        <p id="copyright">© Shrine 2023</p>
+      </div>
+    </footer>
+
+    <div id="prefillOptions">
+      <button class="m" id="resetForm">
+        <svg class="feather">
+          <use href="../feather-sprite.svg#rotate-ccw" />
+        </svg>
+      </button>
+      <div class="hr"></div>
+
+      <p class="light">Fill form</p>
+
+      <div id="optionsStack">
+        <button id="prefill_A">Alex<i class="xxs">SF</i></button>
+        <button id="prefill_B">Alex<i class="xxs">MTV</i></button>
+        <button id="prefill_C">Alexandra<i class="xxs">SF</i></button>
+        <button id="prefill_D">Charlie<i class="xxs">MUC</i></button>
+        <button id="prefill_E">Isabelle<i class="xxs">BER</i></button>
+      </div>
+
+      <div id="closediv">
+        <button class="m" id="closeOptions">
+          <svg class="feather">
+            <use href="../feather-sprite.svg#x" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="../darktheme.js"></script>
+    <script src="../settings.js"></script>
+    <script>
+      const Field_ID = [
+        "FirstName",
+        "LastName",
+        "Phone",
+        "Email",
+        "Country",
+        "Address 1",
+        "Address 2",
+        "City",
+        "Postcode",
+        "State",
+      ];
+      const Field = [];
+      // const AddressForm = [FirstName, LastName, Phone, Country, AddressA, AddressB, City, Postcode]
+      for (let i in Field_ID) {
+        // Popoluate Address Field Array with HTML Field elements that were found by ID
+        Field.push(document.getElementById(Field_ID[i]));
+      }
+
+      function passValues() {
+        for (let i in Field_ID) {
+          // On Submission add values that were saved to local storage
+          localStorage.setItem(Field_ID[i], Field[i].value);
+        }
+      }
+
+      // When Form is submittted Call PassValues function & Navigate to Payment.html
+      let form = document.getElementById("addressForm");
+      form.addEventListener("submit", function (event) {
+        passValues();
+        window.location.href = "payment.html";
+      });
+
+      // Form Quick options
+      const PrefillButtonsID = [
+        "prefill_A",
+        "prefill_B",
+        "prefill_C",
+        "prefill_D",
+        "prefill_E",
+      ];
+
+      const PrefillProfile = [
+        {
+          FirstName: "Alex",
+          LastName: "Park",
+          Phone: "+1 858 230 4200",
+          Email: "alex.park@gmail.com",
+          Country: "United States",
+          AddressOne: "345 Spear Street",
+          AddressTwo: "",
+          City: "San Francisco",
+          Postcode: "94105",
+          State: "California",
+        },
+        {
+          FirstName: "Alex",
+          LastName: "Park",
+          Phone: "+1 858 230 4200",
+          Email: "alex.park@gmail.com",
+          Country: "United States",
+          AddressOne: "1600 Amphitheater Pkwy",
+          AddressTwo: "",
+          City: "Mountain View",
+          Postcode: "94043",
+          State: "California",
+        },
+        {
+          FirstName: "Alexandra",
+          LastName: "Park",
+          Phone: "+1 858 230 4200",
+          Email: "alex.park@gmail.com",
+          Country: "United States",
+          AddressOne: "345 Spear Street",
+          AddressTwo: "",
+          City: "San Francisco",
+          Postcode: "94105",
+          State: "California",
+        },
+        {
+          FirstName: "Charlie",
+          LastName: "Shmidt",
+          Phone: "+49 657 979 2096",
+          Email: "charlie.shmidt@gmail.com",
+          Country: "Germany",
+          AddressOne: "Erika-Mann-Straße 33",
+          AddressTwo: "Etage 2, WH58",
+          City: "Munich",
+          Postcode: "80636",
+          State: "Bavaria",
+        },
+        {
+          FirstName: "Isabelle",
+          LastName: "Shizue",
+          Phone: "+49 657 979 2096",
+          Email: "isabelle.shizue@gmail.com",
+          Country: "Germany",
+          AddressOne: "Tucholskystraße 2",
+          AddressTwo: "",
+          City: "Berlin",
+          Postcode: "80636",
+          State: "Bavaria",
+        },
+      ];
+
+      const PrefillButton = [];
+      for (let i in PrefillButtonsID) {
+        // Populate PrefillButton Array with HTML Input elements that are located by their ID
+        PrefillButton.push(document.getElementById(PrefillButtonsID[i]));
+        // For Each Prefill Button adding a Click event
+        PrefillButton[i].addEventListener("click", function (event) {
+          // C = is a way to find which of the button was clicked
+          let c = i;
+          // For each Address Field
+          for (let y in Field) {
+            if (Field[y] != document.getElementById("coupon")) {
+              Field[y].value = Object.values(PrefillProfile[c])[y];
+            }
+          }
+        });
+      }
+      const ResetFormButton = document.getElementById("resetForm");
+      ResetFormButton.addEventListener("click", function (event) {
+        form.reset();
+      });
+
+      const CloseFormButton = document.getElementById("closeOptions");
+      const PrefillMenu = document.getElementById("prefillOptions");
+      CloseFormButton.addEventListener("click", function (event) {
+        PrefillMenu.remove();
+      });
+    </script>
+    <script src="../autocomplete.js"></script>
+  </body>
+</html>
